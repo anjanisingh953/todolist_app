@@ -23,7 +23,10 @@ const login = async (req,res,next)=>{
 }
  
 
-const register = async(req,res)=>{
+const register = async(req,res,next)=>{
+
+    console.log('req.body >>>',req.body);
+
     const { name, email, password } = req.body;
     let user = await User.findOne({email});
     if(user){

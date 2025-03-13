@@ -19,7 +19,7 @@ app.use(cors({
 
 //using routes
 app.use('/api/v1/users',userRouter);
-app.use('/api/v1/task',taskRouter);
+app.use('/api/v1/task',taskRouter); 
 app.use('/*',handleUnknownReq)
 
 app.use(errorMiddleware);
